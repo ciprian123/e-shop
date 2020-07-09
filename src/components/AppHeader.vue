@@ -16,10 +16,32 @@
           prepend-inner-icon="search"
         ></v-text-field>
       <v-spacer></v-spacer>
-      <v-btn icon
-        v-for='option in headerOptions'
-        v-bind:key='option'>
-        <v-icon>{{ option }}</v-icon>
+
+      <v-menu offset-y>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn icon
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
+          <v-icon>account_circle</v-icon>
+        </v-btn>
+      </template>
+      <v-list>
+        <v-list-item link to='/login'>
+          <v-list-item-title>Sign in</v-list-item-title>
+        </v-list-item>
+        <v-list-item link to='signup'>
+          <v-list-item-title>Sign up</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+
+      <v-btn icon>
+        <v-icon>favorite</v-icon>
+      </v-btn>
+      <v-btn icon>
+        <v-icon>local_mall</v-icon>
       </v-btn>
     </v-app-bar>
     
