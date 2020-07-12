@@ -77,18 +77,21 @@
             </v-list-item-content>
           </v-list-item>
         </v-list>
+        <AppSidenav/>
       </v-navigation-drawer>
   </section>
 </template>
 
-<script>
+<script> 
+  import AppSidenav from "./AppSidenav.vue"
+
   export default {
     data: () => ({
       drawer: null,
       headerOptions: ['account_circle', 'favorite', 'local_mall']
     }),
-    props: {
-      source: String
+    components: {
+      AppSidenav
     }
   }
 </script>
