@@ -1,48 +1,33 @@
 <template>
    <v-expansion-panels focusable>
     <v-expansion-panel>
-      <v-expansion-panel-header>Fashion</v-expansion-panel-header>
+      <v-expansion-panel-header>Product categories</v-expansion-panel-header>
       <v-expansion-panel-content>
         
-        <v-expansion-panels>
-        <v-expansion-panel>
-          <v-expansion-panel-header>Woman clothing</v-expansion-panel-header>
-            <v-expansion-panel-content>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis nam commodi eos facilis quae cum ducimus explicabo dolores aspernatur. Iure cumque inventore, rerum aut veniam quisquam id nostrum facilis.
-          </v-expansion-panel-content>
-        </v-expansion-panel>
 
-        <v-expansion-panel>
-          <v-expansion-panel-header>Man clothing</v-expansion-panel-header>
-            <v-expansion-panel-content>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis nam commodi eos facilis quae cum ducimus explicabo dolores aspernatur. Iure cumque inventore, rerum aut veniam quisquam id nostrum facilis.
-          </v-expansion-panel-content>
-        </v-expansion-panel>
-        </v-expansion-panels>
+        <v-list
+          dense
+          nav
+        >
+          <v-list-item
+            link
+          >
+            <v-list-item-content>
+              <v-list-item-title>Nike Sneakers</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
 
-      </v-expansion-panel-content>
-    </v-expansion-panel>
-
-    <v-expansion-panel>
-      <v-expansion-panel-header>Toys</v-expansion-panel-header>
-      <v-expansion-panel-content>
-
-
-       <v-expansion-panels>
-        <v-expansion-panel>
-          <v-expansion-panel-header>Toys for girls</v-expansion-panel-header>
-            <v-expansion-panel-content>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis nam commodi eos facilis quae cum ducimus explicabo dolores aspernatur. Iure cumque inventore, rerum aut veniam quisquam id nostrum facilis.
-          </v-expansion-panel-content>
-        </v-expansion-panel>
-
-        <v-expansion-panel>
-          <v-expansion-panel-header>Toys for boys</v-expansion-panel-header>
-            <v-expansion-panel-content>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis veritatis nam commodi eos facilis quae cum ducimus explicabo dolores aspernatur. Iure cumque inventore, rerum aut veniam quisquam id nostrum facilis.
-          </v-expansion-panel-content>
-        </v-expansion-panel>
-        </v-expansion-panels>
+           <v-list-item 
+             link
+             rounded
+             v-for="index in 34"
+             v-bind:key="index"
+           >
+            <v-list-item-content>
+              <v-list-item-title>Jordan {{index}}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
 
 
       </v-expansion-panel-content>
